@@ -4,7 +4,7 @@ Most relatet to the LetsTrust-TPM module for the Raspberry Pi
 
 # News 
 
-With Raspbian Strecht Kernel 4.14.85 you'll get the TPM 2.0 support build in! 
+With Raspbian Stretch Kernel 4.14.85 you'll get the TPM 2.0 support build in! 
 
 Six easy steps to activate your TPM on the Rapsberry Pi:
 
@@ -15,9 +15,9 @@ run a "sudo rpi-upgrade"
 * Step three:
     * open the /boot/config.txt with "sudo nano /boot/config.txt"
     * activate SPI with
-    * "dtparam=spi=on"
+       * "dtparam=spi=on"
     * and load the TPM device tree overlay with
-    * "dtoverlay=tpm-slb9670"
+       * "dtoverlay=tpm-slb9670"
 * Step four:
   * plug your LetsTrust-TPM on the right position and reboot your Raspberry Pi
 * Step fife:
@@ -25,4 +25,20 @@ run a "sudo rpi-upgrade"
 /dev/tpm0 will appear in yellow letters!
 * Step six:
   * Be happy about your success!
-  
+
+
+# Scripts
+
+* tpm2_all.sh 
+  * Installs the dependencies for the tpm2-tss, tpm2-abrmd and tpm2-tools [1].
+  * Provide a complete clear of your TPM (line 46 out comment) 
+  * Provide a RSA encrypt and RSA decrypt example.
+  * Provide an ECC sign example 
+ 
+
+
+
+
+
+
+  [1] https://github.com/tpm2-software  
