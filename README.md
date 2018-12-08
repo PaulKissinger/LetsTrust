@@ -35,7 +35,8 @@ run a "sudo rpi-upgrade"
   * Provide a RSA encrypt and RSA decrypt example.
   * Provide an ECC sign example 
  
-
+* How to patch a kernel (folder)
+  * Inlcude some scripts to patch your kernel, example for the Raspbian 
 
 
 
