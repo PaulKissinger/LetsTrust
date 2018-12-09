@@ -38,6 +38,9 @@ run a "sudo rpi-upgrade"
 * How to patch a kernel (folder)
   * Inlcude some scripts to patch your kernel, example for the Raspbian 
 
+* TPM_reset_with_GPIO.sh
+  * Reset the LetsTrust TPM with a pintoggle, only for development! 
+
 
 
 
