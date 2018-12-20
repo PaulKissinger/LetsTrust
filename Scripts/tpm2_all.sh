@@ -43,7 +43,7 @@ make -j5
 sudo make install
 
 echo "clear the TPM? -> tpm2_clear -p"
-tpm2_clear -p
+#tpm2_clear -p
 
 echo "Takeownership of changeauth"
 tpm2_changeauth  -o "str:owner" -e "str:endorse" -l "str:lock"

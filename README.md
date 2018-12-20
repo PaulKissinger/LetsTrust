@@ -11,7 +11,7 @@ Six easy steps to activate your TPM on the Rapsberry Pi:
 * Step one:
   * Open a (whatever) term on your Pi.
 * Step two:
-run a "sudo rpi-upgrade" 
+run a "sudo rpi-update" 
 * Step three:
     * open the /boot/config.txt with "sudo nano /boot/config.txt"
     * activate SPI with
