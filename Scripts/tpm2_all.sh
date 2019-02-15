@@ -39,6 +39,7 @@ echo "tpm2-tools master branch"
 git clone https://github.com/tpm2-software/tpm2-tools.git
 cd tpm2-tools
 ./bootstrap
+./configure
 make -j5
 sudo make install
 
