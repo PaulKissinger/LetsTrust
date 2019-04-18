@@ -47,7 +47,7 @@ echo "clear the TPM? -> tpm2_clear -p"
 #tpm2_clear -p
 
 echo "Takeownership of changeauth"
-tpm2_changeauth  -o "str:owner" -e "str:endorse" -l "str:lock"
+tpm2_changeauth  -w "str:owner" -e "str:endorse" -l "str:lock"
 
 touch input_data
 echo "Hello TPM2 Cryptoworld!" >> input_data
@@ -59,13 +59,13 @@ tpm2_loadexternal -a n -u key_pub -o rsaencrypt_key_ctx
 tpm2_rsaencrypt -c rsaencrypt_key_ctx -o cipher_data input_data
 tpm2_load -C primary_ctx  -u key_pub -r key_priv  -n name -o rsaencrypt_key_ctx
 tpm2_rsadecrypt -c rsaencrypt_key_ctx -I cipher_data -o output_data
-echo input_data
+cat output_data
 
 echo "ECC sign"
 tpm2_create  -g sha256 -G ecc -C primary_ctx -u key_pub_ecc -r key_priv_ecc
 tpm2_load -C primary_ctx  -u key_pub_ecc  -r key_priv_ecc -n name_ecc -o eccsigning_key_ctx
-tpm2_sign -c eccsigning_key_ctx -G sha256 -m input_data  -s signature
-tpm2_verifysignature  -c eccsigning_key_ctx -G sha256 -m input_data -s signature -t ticket_data
+tpm2_sign -c eccsigning_key_ctx -g sha256 -m input_data -o signature
+tpm2_verifysignature  -c eccsigning_key_ctx -g sha256 -m input_data -s signature -t ticket_data
 
 
 
