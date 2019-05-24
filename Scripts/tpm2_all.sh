@@ -35,8 +35,8 @@ dbus-send --system --dest=org.freedesktop.DBus --type=method_call --print-reply 
 
 cd ..
 
-echo "tpm2-tools 3.1.0"
-git clone -b 3.1.0 https://github.com/tpm2-software/tpm2-tools.git
+echo "tpm2-tools 3.1.3"
+git clone -b 3.1.3 https://github.com/tpm2-software/tpm2-tools.git
 cd tpm2-tools
 ./bootstrap
 ./configure
