@@ -11,7 +11,7 @@ Six easy steps to activate your TPM on the Rapsberry Pi:
 * Step one:
   * Open a (whatever) term on your Pi.
 * Step two:
-run a "sudo rpi-update" 
+  * run a "sudo rpi-update"
 * Step three:
     * open the /boot/config.txt with "sudo nano /boot/config.txt"
     * activate SPI with
@@ -22,7 +22,7 @@ run a "sudo rpi-update"
   * plug your LetsTrust-TPM on the right position and reboot your Raspberry Pi
 * Step fife:
   * Open a (whatever) term on your Pi and type "ls /dev/tpm0" and
-/dev/tpm0 will appear in yellow letters!
+/dev/tpmrm0 will appear in yellow letters!
 * Step six:
   * Be happy about your success!
 
@@ -45,4 +45,4 @@ run a "sudo rpi-update"
 
 
 
-  [1] https://github.com/tpm2-software  
+  [1] https://github.com/tpm2-software

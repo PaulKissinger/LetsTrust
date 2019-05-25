@@ -35,8 +35,8 @@ dbus-send --system --dest=org.freedesktop.DBus --type=method_call --print-reply 
 
 cd ..
 
-echo "tpm2-tools master branch"
-git clone https://github.com/tpm2-software/tpm2-tools.git
+echo "tpm2-tools 3.1.0"
+git clone -b 3.1.0 https://github.com/tpm2-software/tpm2-tools.git
 cd tpm2-tools
 ./bootstrap
 ./configure
@@ -66,6 +66,3 @@ tpm2_create  -g sha256 -G ecc -C primary_ctx -u key_pub_ecc -r key_priv_ecc
 tpm2_load -C primary_ctx  -u key_pub_ecc  -r key_priv_ecc -n name_ecc -o eccsigning_key_ctx
 tpm2_sign -c eccsigning_key_ctx -g sha256 -m input_data -o signature
 tpm2_verifysignature  -c eccsigning_key_ctx -g sha256 -m input_data -s signature -t ticket_data
-
-
-
