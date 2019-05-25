@@ -55,17 +55,14 @@ echo "Hello TPM2 Cryptoworld!" >> input_data
 echo "File En/Decrypt"
 tpm2_createprimary -a e -g sha256 -G rsa -o primary_ctx -P "str:endorse"
 tpm2_create  -g sha256 -G rsa -C primary_ctx -u key_pub -r key_priv
-tpm2_loadexternal -a n -u key_pub -o rsaencrypt_key_ctx
-tpm2_rsaencrypt -c rsaencrypt_key_ctx -o cipher_data input_data
-tpm2_load -C primary_ctx  -u key_pub -r key_priv  -n name -o rsaencrypt_key_ctx
-tpm2_rsadecrypt -c rsaencrypt_key_ctx -I cipher_data -o output_data
-echo input_data
+tpm2_loadexternal -a n -u key_pub -o external_ctx
+tpm2_rsaencrypt -c external_ctx -o cipher_data input_data
+tpm2_load -C primary_ctx  -u key_pub -r key_priv  -n name -o load_ctx
+tpm2_rsadecrypt -c load_ctx -i cipher_data -o output_data
+cat output_data
 
 echo "ECC sign"
 tpm2_create  -g sha256 -G ecc -C primary_ctx -u key_pub_ecc -r key_priv_ecc
 tpm2_load -C primary_ctx  -u key_pub_ecc  -r key_priv_ecc -n name_ecc -o eccsigning_key_ctx
-tpm2_sign -c eccsigning_key_ctx -G sha256 -m input_data  -s signature
-tpm2_verifysignature  -c eccsigning_key_ctx -G sha256 -m input_data -s signature -t ticket_data
-
-
-
+tpm2_sign -c eccsigning_key_ctx -g sha256 -m input_data  -o signature
+tpm2_verifysignature  -c eccsigning_key_ctx -g sha256 -m input_data -s signature -t ticket_data
