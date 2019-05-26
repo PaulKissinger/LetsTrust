@@ -4,7 +4,7 @@ echo "dependencies for all tpm2 related software"
 sudo apt -y update
 sudo apt -y install doxygen libglib2.0-dev libdbus-1-dev  automake libtool pkg-config gcc libssl-dev libcurl4-gnutls-dev autoconf-archive   libcmocka0   libcmocka-dev   net-tools   build-essential   git     g++   m4     libgcrypt20-dev    uthash-dev    pandoc python-yaml
 
-echo "tpm2-tss version 2.0.0"
+echo "tpm2-tss version 2.0.x"
 git clone -b 2.0.0 https://github.com/tpm2-software/tpm2-tss.git
 cd tpm2-tss
 ./bootstrap
@@ -16,7 +16,7 @@ sudo udevadm control --reload-rules && sudo udevadm trigger
 sudo ldconfig
 cd ..
 
-echo "tpm2-abrmd versoin 2.0.0"
+echo "tpm2-abrmd versoin 2.0.3"
 git clone -b 2.0.0 https://github.com/tpm2-software/tpm2-abrmd.git
 cd tpm2-abrmd
 ./bootstrap
@@ -35,7 +35,7 @@ dbus-send --system --dest=org.freedesktop.DBus --type=method_call --print-reply 
 
 cd ..
 
-echo "tpm2-tools 3.1.0"
+echo "tpm2-tools 3.1.X"
 git clone -b 3.1.0 https://github.com/tpm2-software/tpm2-tools.git
 cd tpm2-tools
 ./bootstrap
