@@ -16,7 +16,7 @@ sudo udevadm control --reload-rules && sudo udevadm trigger
 sudo ldconfig
 cd ..
 
-echo "tpm2-abrmd versoin 2.0.3"
+echo "tpm2-abrmd version 2.0.3"
 git clone -b 2.0.0 https://github.com/tpm2-software/tpm2-abrmd.git
 cd tpm2-abrmd
 ./bootstrap
