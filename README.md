@@ -31,9 +31,9 @@ Six easy steps to activate your TPM on the Rapsberry Pi:
 
 * tpm2_all.sh
   * Installs the dependencies for tpm2-software [1]
-  * Installs tpm2-tss 2.0.0
-  * Installs tpm2-abrmd 2.0.0
-  * Installs tpm2-tools 3.1.0
+  * Installs tpm2-tss master
+  * Installs tpm2-abrmd master
+  * Installs tpm2-tools master
 
 * How to patch a kernel (folder)
   * Inlcude some scripts to patch your kernel, example for Raspbian
