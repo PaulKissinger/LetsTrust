@@ -3,13 +3,13 @@
 # Reset the TPM without reboot
 # only use for development!
 
-gpio mode 5 out 
-gpio write 5 1
+raspi-gpio set 24 op
+raspi-gpio set 24 dh
 tpm2_getrandom 10
-gpio write 5 0
+raspi-gpio set 24 dl
 tpm2_getrandom 10
-sleep 1
-gpio write 5 1
+sleep 0.1
+raspi-gpio set 24 dh
 tpm2_getrandom 10
 tpm2_startup -c
 tpm2_getrandom 10
