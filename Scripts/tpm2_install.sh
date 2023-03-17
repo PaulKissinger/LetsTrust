@@ -2,7 +2,7 @@
 
 echo "dependencies for all tpm2 related software"
 sudo apt -y update
-sudo apt -y install doxygen libglib2.0-dev libdbus-1-dev automake libtool pkg-config gcc libssl-dev libcurl4-gnutls-dev autoconf-archive libcmocka0 libcmocka-dev net-tools build-essential git g++ m4 libgcrypt20-dev uthash-dev pandoc libusb-1.0.0 libjson-c-dev
+sudo apt -y install doxygen libglib2.0-dev libdbus-1-dev automake libtool pkg-config gcc libssl-dev libcurl4-gnutls-dev autoconf-archive libcmocka0 libcmocka-dev net-tools build-essential git g++ m4 libgcrypt20-dev uthash-dev pandoc libusb-1.0-0-dev libjson-c-dev
 
 echo "clone, compile and install the latest tpm2-tss version"
 git clone https://github.com/tpm2-software/tpm2-tss.git
