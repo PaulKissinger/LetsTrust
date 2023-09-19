@@ -1,9 +1,12 @@
 # LetsTrust
+
 This site collect usefull scripts, links and TPM2 related stuff.
-Most relatet to the LetsTrust-TPM module for the Raspberry Pi
+Most relatet to the LetsTrust-TPM module for the Raspberry Pi.
+The latset update of the script installs also the tcti device for teh LetsTrust-TPM2Go
 
 # News
 
+1.1 LetsTrust-TPM
 With Raspbian Stretch Kernel >= 4.14.85 you'll get the TPM 2.0 support build in!
 
 Six easy steps to activate your TPM on the Rapsberry Pi:
@@ -26,6 +29,11 @@ Six easy steps to activate your TPM on the Rapsberry Pi:
 * Step six:
   * Be happy about your success!
 
+1.2 LetsTrust-TPM2Go
+
+The tpm2_all.sh will also install everything for the LetsTrust-TPM2Go.
+Futher informations could be found here:
+https://github.com/PaulKissinger/LetsTrust-TPM2Go
 
 # Scripts
 
@@ -39,7 +47,7 @@ Six easy steps to activate your TPM on the Rapsberry Pi:
   * Inlcude some scripts to patch your kernel, example for Raspbian
 
 * TPM_reset_with_GPIO.sh
-  * Reset the LetsTrust TPM with a pintoggle, only for development!
+  * Reset the LetsTrust-TPM with a pintoggle, only for development!
 
 
 
