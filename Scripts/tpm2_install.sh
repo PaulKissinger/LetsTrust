@@ -39,6 +39,6 @@ echo "clone, compile and install the latest tpm2-tools version"
 git clone https://github.com/tpm2-software/tpm2-tools.git
 cd tpm2-tools
 ./bootstrap
-./configure
+CFLAGS="-Wno-error" ./configure
 make -j4
 sudo make install
