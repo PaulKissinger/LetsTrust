@@ -2,7 +2,7 @@
 
 This site collect usefull scripts, links and TPM2 related stuff.
 Most relatet to the LetsTrust-TPM module for the Raspberry Pi.
-The latset update of the script installs also the tcti device for teh LetsTrust-TPM2Go
+The latset update of the script installs also the tcti device for the LetsTrust-TPM2Go
 
 # News
 
