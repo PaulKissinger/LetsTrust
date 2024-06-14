@@ -7,6 +7,7 @@ sudo apt -y install doxygen libglib2.0-dev libdbus-1-dev automake libtool pkg-co
 echo "clone, compile and install the latest tpm2-tss version"
 git clone https://github.com/tpm2-software/tpm2-tss.git
 cd tpm2-tss
+git checkout 4.1.3
 ./bootstrap
 ./configure --with-udevrulesdir=/etc/udev/rules.d --with-udevrulesprefix=70-
 make -j4
@@ -19,6 +20,7 @@ cd ..
 echo "clone, compile and install the latest tpm2-abrmd version"
 git clone https://github.com/tpm2-software/tpm2-abrmd.git
 cd tpm2-abrmd
+git checkout 3.0.0
 ./bootstrap
 ./configure --with-dbuspolicydir=/etc/dbus-1/system.d --with-systemdsystemunitdir=/lib/systemd/system --with-systemdpresetdir=/lib/systemd/system-preset --datarootdir=/usr/share
 make -j4
@@ -38,6 +40,7 @@ cd ..
 echo "clone, compile and install the latest tpm2-tools version"
 git clone https://github.com/tpm2-software/tpm2-tools.git
 cd tpm2-tools
+git checkout 5.7
 ./bootstrap
 ./configure
 make -j4
