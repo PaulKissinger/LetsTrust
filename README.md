@@ -39,9 +39,9 @@ https://github.com/PaulKissinger/LetsTrust-TPM2Go
 
 * tpm2_all.sh
   * Installs the dependencies for tpm2-software [1]
-  * Installs tpm2-tss master
-  * Installs tpm2-abrmd master
-  * Installs tpm2-tools master
+  * Installs tpm2-tss (Tag: 4.1.3)
+  * Installs tpm2-abrmd (Tag: 3.0.0)
+  * Installs tpm2-tools (Tag: 5.7)
 
 * How to patch a kernel (folder)
   * Inlcude some scripts to patch your kernel, example for Raspbian
