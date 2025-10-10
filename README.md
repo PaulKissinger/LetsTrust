@@ -23,7 +23,7 @@ Six easy steps to activate your TPM on the Rapsberry Pi:
        * "dtoverlay=tpm-slb9670"
 * Step four:
   * plug your LetsTrust-TPM on the right position and reboot your Raspberry Pi
-* Step fife:
+* Step five:
   * Open a (whatever) term on your Pi and type "ls /dev/tpm" and
 * /dev/tpm0 and /dev/tpmrm0 will appear in yellow letters!
 * Step six:
